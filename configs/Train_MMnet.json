@@ -1,0 +1,61 @@
+{
+    "name": "MMnet",
+    "experim_name": "Experiments/MMnet",
+    "fusion_net": "FusionNet",
+    "rec_net": "RecNet",
+    "tags": "Experiment-1",
+    "train_dataset": "MFI-WHU-train",
+    "test_dataset": "MFI-WHU-test",
+    "train_batch_size": 1,
+    "val_batch_size": 1,
+    "num_workers": 24,
+    "save_path":"/save_images/train",
+    "save_path_eval":"/save_images/eval",
+    "mask_block":8,
+    "mask_ratio":0.7,
+
+    "FusionNet":{
+        "feature_num":32
+    },
+
+    "RecNet":{
+        "feature_num":32
+    },
+    "optimizer": {
+        "type": "ADAM",
+        "args":{
+            "lr": 2e-4,
+            "weight_decay":0,
+            "momentum": 0.999
+        },
+        "scheduler":"CosineAnnealingLR",
+        "scheduler_set":{
+            "step_size": 1000,
+            "gamma": 0.5
+        }
+    },
+
+    "trainer": {
+        "total_epochs": 1000,
+        "test_freq": 100
+    },
+
+    "MFI-WHU-test": {
+        "data_dir": {
+                    "data_dir_A":"./data/test/MFI-WHU/imgeA" ,
+                    "data_dir_B":"./data/test/MFI-WHU/imgeB"                                
+                    },
+        "patch_size" : 128    
+    },
+
+    "MFI-WHU-train": {
+        "data_dir": {
+                    "data_dir_A":"./data/train/MFI-WHU/imgeA" ,
+                    "data_dir_B":"./data/train/MFI-WHU/imgeB"                                
+                    },
+        "patch_size" : 128,
+        "data_augmentation":true        
+    }
+
+
+}

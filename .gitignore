@@ -1,0 +1,33 @@
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore compiled files
+*.o
+*.so
+
+# Ignore data directory
+data/
+
+# Ignore Experiments directory
+Experiments/
+
+# Ignore TensorBoardLogs directory
+TensorBoardLogs/
+
+# Ignore any other specific files or directories
+# /path/to/ignored/file_or_directory 
