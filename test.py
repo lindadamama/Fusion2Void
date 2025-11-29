@@ -98,7 +98,7 @@ def main():
     parser = argparse.ArgumentParser(description='PyTorch Testing')
     parser.add_argument('-c', '--config', default='./configs/Eval_MMnet.json',type=str,
                             help='Path to the config file')
-    parser.add_argument('-r', '--resume', default=None, type=str,
+    parser.add_argument('-r', '--resume', default='./ckpt/model_weight.ckpt', type=str,
                             help='Path to the .pth model checkpoint to resume training')
     parser.add_argument('-r1', '--resume_ckpt', default=None, type=str,
                             help='Path to the .pth model checkpoint to resume training')
